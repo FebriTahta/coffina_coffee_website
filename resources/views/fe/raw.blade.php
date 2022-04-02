@@ -56,6 +56,9 @@
             #img_about {
                 max-height: 200px;
             }
+            .logo {
+                max-width: 150px;
+            }
         }
         @media (max-width:500px) {
             #img_about {
@@ -72,6 +75,9 @@
             }
             .ordernow {
                 font-size: 14px !important;
+            }
+            .logo {
+                max-width: 100%;
             }
         }
     </style>
@@ -213,7 +219,7 @@
                         @if ($profile == null)
                         <img src="assets/img/logo.png" class="logo" alt="Logo">
                         @else
-                        <img src="{{asset('img/logo/'.$profile->logo)}}" width="149px" height="50px" class="logo" alt="Logo">
+                        <img src="{{asset('img/logo/'.$profile->logo)}}" class="logo" alt="Logo">
                         @endif
                     </a>
                 </div>
