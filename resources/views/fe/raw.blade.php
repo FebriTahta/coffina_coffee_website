@@ -459,7 +459,7 @@
                                                 {{$item->deskripsi}}
                                             </p>
                                             <div class="button">
-                                                <a href="#" class="ordernow">contact</a>
+                                                <a href="mailto:admin@admin.com" class="ordernow">contact</a>
                                             </div>
                                         </div>
                                     </div>
