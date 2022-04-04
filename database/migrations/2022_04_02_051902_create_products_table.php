@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('jenis_id')->nullable();
             $table->string('name')->nullable();
-            $table->string('deskripsi')->nullable();
+            $table->longText('deskripsi')->nullable();
             $table->string('img')->nullable();
             $table->timestamps();
         });
