@@ -17,6 +17,7 @@
     $jenis_aktif= App\Models\Jenis::first();
     $product    = App\Models\Product::all();
     $team       = App\Models\Team::all();
+    $choice     = App\Models\Choice::all();
     ?>
     <!-- ========== Favicon Icon ========== -->
     @if ($profile !== null)
@@ -38,7 +39,7 @@
     <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/extensions/toastr.min.css') }}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -126,71 +127,6 @@
     </header>
     <!-- Header
     ============================================= -->
-    {{-- <header id="home">
-
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-default bootsnav ">
-
-            <!-- Start Top Search -->
-            <div class="container">
-                <div class="row">
-                    <div class="top-search">
-                        <div class="input-group">
-                            <form action="#">
-                                <input type="text" name="text" class="form-control" placeholder="Search">
-                                <button type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>  
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Top Search -->
-
-            <div class="container">
-
-               
-                <!-- End Atribute Navigation -->
-
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo">
-                    </a>
-                </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
-                        <li>
-                            <a href="contact.html">home</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">about us</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">product</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Team</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">contact</a>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div>
-
-        </nav>
-        <!-- End Navigation -->
-
-    </header>
-    <!-- End Header --> --}}
 
     <header id="home">
 
@@ -215,7 +151,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         @if ($profile == null)
                         <img src="assets/img/logo.png" class="logo" alt="Logo">
                         @else
@@ -276,19 +212,24 @@
                     </p>
                 </div>
                 @endif
-                
-                
-                <div class="widget" style="display: none">
-                    <h4 class="title">Our Coffee</h4>
-                    <ul>
-                        <li><a href="#">Chees croissants</a></li>
-                        <li><a href="#">Bruschetti</a></li>
-                        <li><a href="#">Awesome Vegetables</a></li>
-                        <li><a href="#">Tasty Snacks</a></li>
-                        <li><a href="#">Meal for whole family</a></li>
-                    </ul>
+                <h2>Contact Us</h2>
+                        <p>You can contact us from this email <a href="mailto:admin@admin.com" class="text-primary">' admin@admin.com '</a></p>
+                        <p>We are happy to receive messages and news from you. If thhere is anything you want to ask, you can contact us at following contact :</p>
+                        <div class="address-items">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 equal-height">
+                                    <div class="item">
+                                        <div class="icon"><i class="fas fa-envelope-open"></i> </div>
+                                        <a href="mailto:admin@admin.com" class="text-primary">admin@admin.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="contact-box">
+                    <div class="col-md-12 col-md-offset-1 info" style="margin-bottom: 20px;">
+                        
+                    </div>
                 </div>
-                
             </div>
             <!-- End Side Menu -->
 
@@ -465,7 +406,7 @@
                                                 {{$item->deskripsi}}
                                             </p>
                                             <div class="button">
-                                                <a href="mailto:admin@admin.com" class="ordernow">contact</a>
+                                                <a href="mailto:admin@admin.com" class="ordernow">message</a>
                                             </div>
                                         </div>
                                     </div>
@@ -705,101 +646,100 @@
     <div class="contact-us-area default-padding">
         <div class="container">
             <div class="row">
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Start Footer
-    ============================================= -->
-    <footer>
-        <div class="container">
-            <div class="row">
-
-                <div class="f-items text-center inc-border default-padding" style="display: none">
-                    <!-- Single Item -->
-                    <div class="contact-box">
-                        <div class="col-md-6 equal-height item">
-                            <div class="form-content">
-                                <div class="heading">
-                                    <h3>Drop us a line</h3>
+                <div class="contact-box">
+                    <div class="col-md-6 col-md-offset-1 info" style="margin-bottom: 20px;">
+                        <h2>Contact Us</h2>
+                        <p>You can contact us from this email <a href="mailto:admin@admin.com" class="text-primary">' admin@admin.com '</a></p>
+                        <p>We are happy to receive messages and news from you. If thhere is anything you want to ask, you can contact us at following contact :</p>
+                        <div class="address-items">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 equal-height">
+                                    <div class="item">
+                                        <div class="icon"><i class="fas fa-envelope-open"></i> </div>
+                                        <a href="mailto:admin@admin.com" class="text-primary">admin@admin.com</a>
+                                    </div>
                                 </div>
-                                <form action="assets/mail/contact.php" method="POST" class="contact-form">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <input class="form-control" id="name" name="name" placeholder="Name"
-                                                    type="text">
-                                                <span class="alert-error"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input class="form-control" id="email" name="email"
-                                                    placeholder="Email*" type="email">
-                                                <span class="alert-error"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input class="form-control" id="phone" name="phone"
-                                                    placeholder="Phone" type="text">
-                                                <span class="alert-error"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="form-group comments">
-                                                <textarea class="form-control" id="comments" name="comments" placeholder="Tell Us About Project *"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <button type="submit" name="submit" id="submit">
-                                                Send Message <i class="fa fa-paper-plane"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- Alert Message -->
-                                    <div class="col-md-12 alert-notification">
-                                        <div id="message" class="alert-msg"></div>
-                                    </div>
-                                </form>
                             </div>
                         </div>
+                        @if ($choice->count() > 0)
+                        <form  method="POST" id="formadd">@csrf
+                        <div class="address-items">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8 equal-height">
+                                    <div class="item">
+                                        <h5>You can choose more than one most frequently asked question below</h5>
+                                    </div>
+                                </div>
+                                @foreach ($choice as $item)
+                                <div class="col-md-6">
+                                    <input type="checkbox" value="{{$item->id}}" name="choice_id[]">
+                                    <label>{{$item->name}}</label>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
                     </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-md-6 equal-height item">
-                        <div class="f-item">
-                            <h2>Contact Us</h2>
-                            <p>
-                                Excellence decisively nay man yet impression for contrasted remarkably. There spoke
-                                happy for you are out. Fertile how old address.
-                            </p>
-
-                            <p>
-                                Often merit stuff first oh up hills as he. Servants contempt as although addition
-                                dashwood is procured. Interest in yourself an do of numerous feelings cheerful confined.
-                            </p>
-                            <br>
-                            <form action="#">
-                                <div class="input-group">
-                                    <input type="email" placeholder="Enter your e-mail here" class="form-control"
-                                        name="email">
-                                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                    <!-- Start Form -->
+                    <div class="col-md-5">
+                        <div class="form-content">
+                            <div class="heading">
+                                <h3>Drop us a line</h3>
+                            </div>
+                            
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text">
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text" required>
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="form-group comments">
+                                            <textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="Describe your question" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <button type="submit" style="background-color: brown" name="submit" id="submit">
+                                            Send Message <i class="fa fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Alert Message -->
+                                <div class="col-md-12 alert-notification">
+                                    <div id="message" class="alert-msg"></div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <!-- End Single Item -->
+                    <!-- End Form -->
                 </div>
             </div>
         </div>
+    </div>
+    <!-- End Contact -->
+
+    <!-- Start Footer
+    ============================================= -->
+    <footer>
         <!-- Start Footer Bottom -->
         <div class="footer-bottom bg-dark col-3 text-light">
             <div class="container">
@@ -864,7 +804,55 @@
     <script src="{{asset('assets/js/YTPlayer.min.js')}}"></script>
     <script src="{{asset('assets/js/bootsnav.js')}}"></script>
     <script src="{{asset('assets/js/main.js')}}"></script>
-
+    {{-- href="{{ asset('app-assets/css/plugins/extensions/ext-component-toastr.css') }}"> --}}
+    <script src="{{ asset('app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
+    <script>
+        $('#formadd').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('message.store') }}",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                // beforeSend: function() {
+                //     $('#btnadd').attr('disabled', 'disabled');
+                //     $('#btnadd').val('Proses Input');
+                // },
+                success: function(response) {
+                    if (response.status == 200) {
+                        // $('#large').modal('hide');
+                        $("#formadd")[0].reset();
+                        // var oTable = $('#example').dataTable();
+                        // oTable.fnDraw(false);
+                        // $('#btnadd').val('INPUT!');
+                        // $('#btnadd').attr('disabled', false);
+                        toastr['success']('👋' + response.message, 'Success!', {
+                            closeButton: true,
+                            tapToDismiss: false,
+                        });
+                    } else {
+                        // $('#btnadd').val('INPUT!');
+                        // $('#btnadd').attr('disabled', false);
+                        toastr['error']('👋' + response.message, 'Error!', {
+                            closeButton: true,
+                            tapToDismiss: false,
+                        });
+                        $('#errList').html("");
+                        $('#errList').addClass('alert alert-danger');
+                        $.each(response.errors, function(key, err_values) {
+                            $('#errList').append('<div>' + err_values + '</div>');
+                        });
+                    }
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

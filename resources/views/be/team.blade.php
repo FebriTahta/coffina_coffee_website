@@ -17,10 +17,10 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">PRODUCT</h2>
+                            <h2 class="content-header-title float-left mb-0">TEAM</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item active">Product Item
+                                    <li class="breadcrumb-item active">Our Team
                                     </li>
                                 </ol>
                             </div>
@@ -38,7 +38,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">INPUT PRODUCT</h4>
+                                    <h4 class="card-title">TEAM DATA</h4>
                                 </div>
                                 <form id="formadd">
                                     @csrf

@@ -17,10 +17,10 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">PRODUCT</h2>
+                            <h2 class="content-header-title float-left mb-0">CHOICE</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item active">Product Item
+                                    <li class="breadcrumb-item active">Multiple Choice
                                     </li>
                                 </ol>
                             </div>
@@ -35,46 +35,24 @@
                         <div class="col-xl-12">
                             <div id="errList" class="text-uppercase"></div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">INPUT PRODUCT</h4>
+                                    <h4 class="card-title text-capitalize">most frequently asked question</h4>
                                 </div>
                                 <form id="formadd">
                                     @csrf
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                                <label for="">Name</label>
-                                                <input type="text" class="form-control" name="name" required>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                                <label for="">Deskripsi</label>
-                                                <textarea name="deskripsi" class="form-control" id="" cols="30" rows="3"></textarea>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                                 <div class="form-group">
-                                                    <label for="basicInput">Jenis</label>
-                                                    <select name="jenis_id" class="form-control" id="" required>
-                                                        <option value=""></option>
-                                                        @foreach ($jenis as $item)
-                                                            <option value="{{$item->id}}">{{$item->name}}</option>
-                                                        @endforeach
-                                                    </select>
+                                                    <label for="basicInput">Questions</label>
+                                                    <input type="text" class="form-control" name="name"
+                                                        id="name" placeholder="Question" />
                                                 </div>
                                             </div>
                                             
-                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                                <label for="customFile">Image Product</label>
-                                                <div class="custom-file" style="margin-bottom: 20px">
-                                                    <input onchange="showPreview(event)" type="file"
-                                                        class="custom-file-input" name="img" id="customFile" required/>
-                                                    <label class="custom-file-label" id="img_preview" for="customFile">Choose file</label>
-                                                </div>
-                                                <br>
-                                                <img src="" id="preview" alt="">
-                                            </div>
-                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                                 
                                                 <input type="submit" class="btn btn-sm btn-primary" id="btnadd"
                                                     value="INPUT!">
@@ -85,31 +63,27 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <section id="responsive-datatable">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card">
                                             <div class="card-header border-bottom">
-                                                <h4 class="card-title">Product Table</h4>
+                                                <h4 class="card-title">Question Table</h4>
                                             </div>
                                             <div class="card-datatable">
                                                 <table class="table" id="example">
                                                     <thead>
                                                         <tr>
-                                                            <th>img</th>
-                                                            <th>jenis</th>
-                                                            <th>name</th>
-                                                            <th>deskripsi</th>
+                                                            <th>Question</th>
+
                                                             <th>option</th>
                                                         </tr>
                                                     </thead>
                                                     <tfoot>
                                                         <tr>
-                                                            <th>img</th>
-                                                            <th>jenis</th>
-                                                            <th>name</th>
-                                                            <th>deskripsi</th>
+                                                            <th>Question</th>
+                                                        
                                                             <th>option</th>
                                                         </tr>
                                                     </tfoot>
@@ -167,7 +141,7 @@
 
     <div class="modal fade text-left" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: rgb(11, 202, 139)">
                     <h4 class="modal-title" id="myModalLabel17" style="color: white">UPDATE DATA</h4>
@@ -179,32 +153,17 @@
                     @csrf
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                 <div class="form-group">
                                     <input type="hidden" name="id" id="id" required>
-                                    <label for="basicInput">name</label>
+                                    <label for="basicInput">Name</label>
                                     <input type="text" class="form-control" name="name" id="name"
-                                        placeholder="Mini Title" />
+                                        placeholder="Name" />
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                <div class="form-group">
-                                    <label for="helpInputTop">Deskripsi</label>
-                                    <textarea name="deskripsi" id="deskripsi" cols="30" rows="3" class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                <label for="customFile">Image Product</label>
-                                <div class="custom-file" style="margin-bottom: 20px">
-                                    <input type="file" class="custom-file-input" onchange="showPreview2(event)" name="img"
-                                        id="customFile" />
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
-                                </div>
-                                <br>
+                            
+                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                 <input type="submit" class="btn btn-sm btn-primary" id="btnadd2" value="INPUT!">
-                            </div>
-                            <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                <img src="" id="imgpreview" alt="">
                             </div>
 
                         </div>
@@ -252,14 +211,11 @@
             var button = $(event.relatedTarget)
             var id = button.data('id')
             var name = button.data('name')
-            var deskripsi = button.data('deskripsi')
-            var src = button.data('src')
+            
             var modal = $(this)
             modal.find('.modal-content #id').val(id);
             modal.find('.modal-content #name').val(name);
-            modal.find('.modal-content #deskripsi').val(deskripsi);
-            document.getElementById('imgpreview').src = src;
-            console.log(src);
+            
         })
     </script>
     <script>
@@ -278,14 +234,14 @@
             var formData = new FormData(this);
             $.ajax({
                 type: 'POST',
-                url: "{{ route('product.delete') }}",
+                url: "{{ route('choice.delete') }}",
                 data: formData,
                 cache: false,
                 contentType: false,
                 processData: false,
                 beforeSend: function() {
                     $('#btndel').attr('disabled', 'disabled');
-                    $('#btndel').val('Process Deleting Product');
+                    $('#btndel').val('Process Deleting jenis product');
                 },
                 success: function(response) {
                     if (response.status == 200) {
@@ -326,7 +282,7 @@
             var formData = new FormData(this);
             $.ajax({
                 type: 'POST',
-                url: "{{ route('product.store') }}",
+                url: "{{ route('choice.store') }}",
                 data: formData,
                 cache: false,
                 contentType: false,
@@ -341,7 +297,6 @@
                         $("#formadd")[0].reset();
                         var oTable = $('#example').dataTable();
                         oTable.fnDraw(false);
-                        $('#img_preview').html('');
                         $('#btnadd').val('INPUT!');
                         $('#btnadd').attr('disabled', false);
                         toastr['success']('👋' + response.message, 'Success!', {
@@ -373,7 +328,7 @@
             var formData = new FormData(this);
             $.ajax({
                 type: 'POST',
-                url: "{{ route('product.store') }}",
+                url: "{{ route('choice.store') }}",
                 data: formData,
                 cache: false,
                 contentType: false,
@@ -422,30 +377,15 @@
                 destroy: true,
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('product.page') }}",
+                ajax: "{{ route('choice.page') }}",
                 columns: [{
-                        
-                        data: 'image',
-                        name: 'image'
-                    },
-                    {
-                        
-                        data: 'jenis',
-                        name: 'jenis.name'
-                    },
-                    {
-                        
+                        "width":70,
                         data: 'name',
                         name: 'name'
                     },
-                    {
-                        
-                        data: 'deskripsi',
-                        name: 'deskripsi'
-                    },
 
                     {
-                        
+                        "width":30,
                         data: 'option',
                         name: 'option',
                         orderable: true,

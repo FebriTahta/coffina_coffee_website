@@ -89,6 +89,7 @@ $(function () {
     // Email detail section
     if ($(emailScrollArea).length > 0) {
       var users_list = new PerfectScrollbar(emailScrollArea[0]);
+      console.log('lol');
     }
   }
   // if it is a touch device
@@ -96,6 +97,7 @@ $(function () {
     $(sidebarMenuList).css('overflow', 'scroll');
     $(emailUserList).css('overflow', 'scroll');
     $(emailScrollArea).css('overflow', 'scroll');
+    // console.log('lol');
   }
 
   // Email to user select
@@ -216,7 +218,35 @@ $(function () {
   // Email Right sidebar toggle
   if (emailUserList.find('li').length) {
     emailUserList.find('li').on('click', function (e) {
+      var id = $(this).data('id'); 
+      var name = $(this).data('name'); 
+      var email = $(this).data('email'); 
+      var phone = $(this).data('phone'); 
+      var deskripsi = $(this).data('deskripsi'); 
+      var tanggal = $(this).data('tanggal'); 
+      var choice = $(this).data('choice'); 
+      console.log(choice);
+      $('#nama_pengirim').html(name);
+      $('#email_pengirim').html(email +' ('+ phone +') ');
+      $('#deskripsi_pengirim').html(deskripsi);
+      $('#tanggal_pengirim').html(tanggal);
+      $('#mailto_pengirim').attr('mailto:'+email);
+      $('#choice_pengirim').html('im also asked about : '+ choice);
       emailDetails.toggleClass('show');
+
+      $.ajax({
+          type: "GET",
+          dataType: "json",
+          url: '/change-status-message/'+id,
+          // data: {'status': status, 'user_id': user_id},
+          success: function(response){
+            console.log(response.success);
+            toastr['success']('👋' + response.message, 'Success!', {
+                closeButton: true,
+                tapToDismiss: false,
+            });
+          }
+      });
     });
   }
 
@@ -240,18 +270,37 @@ $(function () {
 
   // Favorite star click
   if (favoriteStar.length) {
-    favoriteStar.on('click', function (e) {
-      $(this).find('svg').toggleClass('favorite');
-      e.stopPropagation();
-      // show toast only have favorite class
-      if ($(this).find('svg').hasClass('favorite')) {
-        toastr['success']('Updated mail to favorite', 'Favorite Mail ⭐️', {
-          closeButton: true,
-          tapToDismiss: false,
-          rtl: isRtl
-        });
-      }
-    });
+      favoriteStar.on('click', function (e) {
+          $(this).find('svg').toggleClass('favorite');
+          e.stopPropagation();
+          // show toast only have favorite class
+          // if ($(this).find('svg').hasClass('favorite')) {
+          //     toastr['success']('Updated mail to favorite', 'Favorite Mail ⭐️', {
+          //       closeButton: true,
+          //       tapToDismiss: false,
+          //       rtl: isRtl
+          //     });
+          // }
+          var id = $(this).data('id'); 
+          console.log(id);
+          $.ajax({
+              type: "GET",
+              dataType: "json",
+              url: '/remove-message/'+id,
+              // data: {'status': status, 'user_id': user_id},
+              success: function(response){
+                console.log(response.success);
+                toastr['warning']('Message has been removed', 'Remove Message ', {
+                        closeButton: true,
+                        tapToDismiss: false,
+                        rtl: isRtl
+                      });
+
+                      window.location.reload("Refresh")
+              }
+          });
+
+      });
   }
 
   // For app sidebar on small screen

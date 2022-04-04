@@ -5,6 +5,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\ChoiceController;
 use App\Models\Slider;
 /*
 |--------------------------------------------------------------------------
@@ -66,4 +67,12 @@ Route::post('/team-delete',[TeamController::class,'delete_team'])->name('team.de
 Route::post('/sosmed-post',[TeamController::class,'store_sosmed'])->name('sosmed.store');
 Route::post('/sosmed-delete',[TeamController::class,'delete_sosmed'])->name('sosmed.delete');
 
+Route::get('/choice-page',[ChoiceController::class,'page_choice'])->name('choice.page');
+Route::post('/choice-store',[ChoiceController::class,'store_choice'])->name('choice.store');
+Route::post('/choice-delete',[ChoiceController::class,'delete_choice'])->name('choice.delete');
+
+Route::post('/message-post',[ChoiceController::class,'store_message'])->name('message.store');
+Route::get('/message-page',[ChoiceController::class,'page_message'])->name('message.page');
+Route::get('/change-status-message/{id}',[ChoiceController::class,'change_status_message'])->name('change_status_message');
+Route::get('/remove-message/{id}',[ChoiceController::class,'remove_message'])->name('remove_message');
 });
