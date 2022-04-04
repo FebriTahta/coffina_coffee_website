@@ -3,13 +3,10 @@
 
 <head>
     <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8">
+    {{-- <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rescaf - Food & Restauratn Template">
-
-    <!-- ========== Page Title ========== -->
-    <title>Coffina</title>
+    <meta name="description" content="Rescaf - Food & Restauratn Template"> --}}
     <?php 
     $profile    = App\Models\Profile::first();
     $about      = App\Models\About::first();
@@ -19,6 +16,21 @@
     $team       = App\Models\Team::all();
     $choice     = App\Models\Choice::all();
     ?>
+
+    <meta property="og:title" content="Demo Coffina" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://demo.bkprmijawatimur.com" />
+    {{-- <meta property="og:image" content="http://my.site.com/images/thumb.png" /> --}}
+    <meta property="og:image" content="{{asset('img/icon/'.$profile->icon)}}" />
+    <meta property="og:description" content="for demo website. u can contact me at 081329146514" />
+    <meta name="theme-color" content="#FF0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include this to make the og:image larger -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ========== Page Title ========== -->
+    <title>Demo Coffina</title>
+    
     <!-- ========== Favicon Icon ========== -->
     @if ($profile !== null)
     <link rel="shortcut icon" href="{{asset('img/icon/'.$profile->icon)}}" type="image/x-icon">
