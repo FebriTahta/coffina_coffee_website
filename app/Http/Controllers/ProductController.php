@@ -91,15 +91,28 @@ class ProductController extends Controller
 
     public function delete_jenis(Request $request)
     {
+        $data = Jenis::find($request->id);
+        if ($data->product->count() > 0) {
+            # code...
+            return response()->json(
+                [
+                  'status'  => 400,
+                  'message' => 'Katalog ini mempunyai product, Hapus product pada katalog ini terlebih dahulu untuk menghapus katalog ini'
+                ]
+            );
 
-        $data = Jenis::find($request->id)->delete();
+        }else {
+            # code...
+            $data = Jenis::find($request->id)->delete();
+            return response()->json(
+                [
+                  'status'  => 200,
+                  'message' => 'Jenis Product has been deleted'
+                ]
+            );
+        }
 
-        return response()->json(
-            [
-              'status'  => 200,
-              'message' => 'Jenis Product has been deleted'
-            ]
-        );
+        
     }
 
     public function store_product(Request $request)
