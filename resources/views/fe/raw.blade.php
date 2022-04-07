@@ -67,15 +67,18 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 
     <style>
-        @media (min-width: 501px) {
+        @media (min-width: 451px) {
             #img_about {
                 max-height: 200px;
             }
             .logo {
                 max-width: 150px;
             }
+            #header {
+                display: none;
+            }
         }
-        @media (max-width:500px) {
+        @media (max-width:450px) {
             #img_about {
                 width: 100%;
             }
@@ -142,7 +145,7 @@
     <!-- Header
     ============================================= -->
 
-    <header id="home">
+    {{-- <header id="home">
 
         <!-- Start Navigation -->
         <nav class="navbar navbar-default attr-border navbar-sticky bootsnav">
@@ -250,9 +253,114 @@
         </nav>
         <!-- End Navigation -->
 
-    </header>
+    </header> --}}
     <!-- End Header -->
+    <header id="home">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent">
 
+            <div class="container">
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                       
+                        <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        @if ($profile == null)
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                        @else
+                        <img src="{{asset('img/logo/'.$profile->logo)}}" class="logo" alt="Logo">
+                        @endif
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                        <li>
+                            <a href="/">home</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#aboutus">about us</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#product">product</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#team">Team</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#contact">contact</a>
+                        </li>
+                        @auth
+                            <li>
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ route('login') }}">login</a>
+                            </li>
+                        @endauth
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                @if ($about !== null)
+                <div class="widget">
+                    <h4 class="title">{{$about->title}}</h4>
+                    <p>
+                       {!!$about->deskripsi!!}
+                    </p>
+                </div>
+                @endif
+                <h2>Contact Us</h2>
+                        <p>You can contact us from this email <a href="mailto:admin@admin.com" class="text-primary">' admin@admin.com '</a></p>
+                        <p>We are happy to receive messages and news from you. If thhere is anything you want to ask, you can contact us at following contact :</p>
+                        <div class="address-items">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 equal-height">
+                                    <div class="item">
+                                        <div class="icon"><i class="fas fa-envelope-open"></i> </div>
+                                        <a href="mailto:admin@admin.com" class="text-primary">admin@admin.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="contact-box">
+                    <div class="col-md-12 col-md-offset-1 info" style="margin-bottom: 20px;">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End Side Menu -->
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
     <!-- Start Banner
     ============================================= -->
     <div class="banner-area content-less responsive-auto-height">
