@@ -37,7 +37,7 @@
             var headerH = '75';
             $('html, body').stop().animate({
                 scrollTop: $($anchor.attr('href')).offset().top - headerH + "px"
-            }, 1500, 'easeInOutExpo');
+            }, 300, 'easeInOutExpo');
             event.preventDefault();
         });
 

@@ -21,7 +21,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://demo.bkprmijawatimur.com" />
     {{-- <meta property="og:image" content="http://my.site.com/images/thumb.png" /> --}}
+    @if ($profile !== null)
     <meta property="og:image" content="{{asset('img/icon/'.$profile->icon)}}" />
+    @endif
     <meta property="og:description" content="for demo website. u can contact me at 081329146514" />
     <meta name="theme-color" content="#FF0000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -655,7 +657,7 @@
         </div>
     </div>
 
-    <div class="contact-us-area default-padding">
+    <div class="contact-us-area default-padding" id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-box">
