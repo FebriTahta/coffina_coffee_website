@@ -34,7 +34,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- ========== Page Title ========== -->
-    <title>Demo Coffina</title>
+    <title>Coffinashop</title>
     
     <!-- ========== Favicon Icon ========== -->
     @if ($profile !== null)
