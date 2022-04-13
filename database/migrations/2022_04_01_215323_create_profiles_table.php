@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('icon')->nullable();
             $table->string('logo')->nullable();
+            $table->string('email')->nullable();
+            $table->string('warna_bg')->nullable();
+            $table->string('warna_text')->nullable();
             $table->timestamps();
         });
     }

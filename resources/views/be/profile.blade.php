@@ -66,7 +66,12 @@
                                                 <img src="" id="imgpreview" height="100px" width="auto" alt="">
                                             </div>
                                             <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                                <img src="" id="preview" alt="">
+                                               <div class="row">
+                                                    <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                        <label>Email Corp</label>
+                                                        <input type="email" class="form-control" name="email" id="email" required>
+                                                    </div>
+                                               </div>
                                             </div>
                                             <div class="col-md-12" style="text-align: right;">
                                                 <input type="submit" id="btnadd" class="btn btn-sm btn-info"
@@ -118,6 +123,14 @@
                                                 <br>
                                                 <img src="{{asset('img/logo/'.$profile->logo)}}" id="imgpreview" height="100px" width="auto" alt="">
                                             </div>
+                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                <div class="row">
+                                                     <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                         <label>Email Corp</label>
+                                                         <input type="email" class="form-control" value="{{$profile->email}}" name="email" id="email" required>
+                                                     </div>
+                                                </div>
+                                             </div>
                                             <div class="col-md-12" style="text-align: right;">
                                                 <input type="submit" id="btnadd" class="btn btn-sm btn-info"
                                                     value="SUBMIT!">

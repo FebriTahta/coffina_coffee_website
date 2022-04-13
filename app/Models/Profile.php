@@ -11,5 +11,8 @@ class Profile extends Model
     protected $fillable = [
         'icon',
         'logo',
+        'email',
+        'warna_bg',
+        'warna_text'
     ];
 }

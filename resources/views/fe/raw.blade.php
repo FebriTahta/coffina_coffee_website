@@ -17,14 +17,17 @@
     $choice     = App\Models\Choice::all();
     ?>
 
-    <meta property="og:title" content="Demo Coffina" />
+    <meta property="og:title" content="Coffina" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://demo.bkprmijawatimur.com" />
+    <meta property="og:url" content="http://coffinashop.com" />
     {{-- <meta property="og:image" content="http://my.site.com/images/thumb.png" /> --}}
     @if ($profile !== null)
     <meta property="og:image" content="{{asset('img/icon/'.$profile->icon)}}" />
     @endif
-    <meta property="og:description" content="for demo website. u can contact me at 081329146514" />
+
+    @if ($about !== null)
+    <meta property="og:description" content="{{$about->deskripsi}}" />
+    @endif
     <meta name="theme-color" content="#FF0000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Include this to make the og:image larger -->
@@ -337,14 +340,25 @@
                 </div>
                 @endif
                 <h2>Contact Us</h2>
-                        <p>You can contact us from this email <a href="mailto:admin@admin.com" class="text-primary">' admin@admin.com '</a></p>
+                        <p>You can contact us from this email 
+                            @if ($profile !== null)
+                            <a href="mailto:{{$profile->email}}" class="text-primary">' {{$profile->email}} '</a>
+                            @else
+                            <a href="mailto:admin@admin.com" class="text-primary">' admin@admin.com '</a>
+                            @endif
+                            
+                        </p>
                         <p>We are happy to receive messages and news from you. If thhere is anything you want to ask, you can contact us at following contact :</p>
                         <div class="address-items">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 equal-height">
                                     <div class="item">
                                         <div class="icon"><i class="fas fa-envelope-open"></i> </div>
+                                        @if ($profile == null)
                                         <a href="mailto:admin@admin.com" class="text-primary">admin@admin.com</a>
+                                        @else
+                                        <a href="mailto:{{$profile->email}}" class="text-primary">{{$profile->email}}</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -528,7 +542,11 @@
                                                 {{$item->deskripsi}}
                                             </p>
                                             <div class="button">
-                                                <a href="mailto:admin@admin.com" class="ordernow">message</a>
+                                                @if ($profile !== null)
+                                                <a href="mailto:{{$profile->email}}" class="ordernow">message</a>
+                                                @else
+                                                <a href="#email@notfound" class="ordernow"> - mail corp is needed</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -771,14 +789,20 @@
                 <div class="contact-box">
                     <div class="col-md-6 col-md-offset-1 info" style="margin-bottom: 20px;">
                         <h2>Contact Us</h2>
-                        <p>You can contact us from this email <a href="mailto:admin@admin.com" class="text-primary">' admin@admin.com '</a></p>
+                        <p>You can contact us from this email 
+                            @if ($profile !== null)
+                            <a href="mailto:{{$profile->email}}" class="text-primary">' {{$profile->email}} '</a></p>    
+                            @endif
+                            
                         <p>We are happy to receive messages and news from you. If thhere is anything you want to ask, you can contact us at following contact :</p>
                         <div class="address-items">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 equal-height">
                                     <div class="item">
                                         <div class="icon"><i class="fas fa-envelope-open"></i> </div>
-                                        <a href="mailto:admin@admin.com" class="text-primary">admin@admin.com</a>
+                                        @if ($profile !== null)
+                                        <a href="mailto:{{$profile->email}}" class="text-primary">{{$profile->email}}</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

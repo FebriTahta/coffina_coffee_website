@@ -37,6 +37,7 @@ class ProfileController extends Controller
                 [
                     'icon'     => $filename1,
                     'logo'     => $filename2,
+                    'email'    => $request->email
                 ]
             );
 
@@ -51,6 +52,7 @@ class ProfileController extends Controller
                 ],
                 [
                     'icon'     => $filename1,
+                    'email'    => $request->email
                 ]
             );
         }elseif ($request->icon !== null && $request->logo == null) {
@@ -64,6 +66,7 @@ class ProfileController extends Controller
                 ],
                 [
                     'logo'     => $filename2,
+                    'email'    => $request->email
                 ]
             );
         }
