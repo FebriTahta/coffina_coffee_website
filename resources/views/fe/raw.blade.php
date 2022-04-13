@@ -498,10 +498,22 @@
 
     <!-- Start Food Menu
     ============================================= -->
-    <div class="food-menu-area inc-isotop default-padding " id="product">
+    <div class="food-menu-area inc-isotop default-padding " id="product"
+    @if ($profile !== null)
+        style="background-color:{{$profile->warna_bg}}"
+    @endif>
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
+                    @if ($profile !== null)
+                    <div class="site-heading text-center">
+                        <h3 style="color:{{$profile->warna_text}}">Discover</h3>
+                        <h2 style="color:{{$profile->warna_text}}">Our Coffee</h2>
+                        <p style="color:{{$profile->warna_text}}">
+                            We have two variants of coffee menu, including coffee beans, blends and grounds
+                        </p>
+                    </div>
+                    @else
                     <div class="site-heading text-center">
                         <h3>Discover</h3>
                         <h2>Our Coffee</h2>
@@ -509,6 +521,8 @@
                             We have two variants of coffee menu, including coffee beans, blends and grounds
                         </p>
                     </div>
+                    @endif
+                    
                 </div>
             </div>
             @if ($jenis->count() > 0 && $product->count() > 0)
@@ -783,11 +797,54 @@
         </div>
     </div>
 
-    <div class="contact-us-area default-padding" id="contact">
+    <div class="contact-us-area default-padding" id="contact" 
+    @if ($profile !== null)
+    style="background-color: {{$profile->warna_bg}}"
+    @endif
+    >
         <div class="container">
             <div class="row">
                 <div class="contact-box">
                     <div class="col-md-6 col-md-offset-1 info" style="margin-bottom: 20px;">
+                        @if ($profile !== null)
+                            <h2 style="color: {{$profile->warna_text}}">Contact Us</h2>
+                            <p style="color: {{$profile->warna_text}}">You can contact us from this email 
+                                @if ($profile !== null)
+                                <a href="mailto:{{$profile->email}}" class="text-primary">' {{$profile->email}} '</a></p>    
+                                @endif
+                                
+                            <p style="color: {{$profile->warna_text}}">We are happy to receive messages and news from you. If thhere is anything you want to ask, you can contact us at following contact :</p>
+                            <div class="address-items">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 equal-height">
+                                        <div class="item">
+                                            <div class="icon"><i class="fas fa-envelope-open" style="color: {{$profile->warna_text}}"></i> </div>
+                                            @if ($profile !== null)
+                                            <a style="color: {{$profile->warna_text}}" href="mailto:{{$profile->email}}" class="text-primary">{{$profile->email}}</a>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @if ($choice->count() > 0)
+                            <form  method="POST" id="formadd">@csrf
+                            <div class="address-items">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-8 equal-height">
+                                        <div class="item">
+                                            <h5 style="color: {{$profile->warna_text}}">You can choose more than one most frequently asked question below</h5>
+                                        </div>
+                                    </div>
+                                    @foreach ($choice as $item)
+                                    <div class="col-md-6">
+                                        <input style="color: {{$profile->warna_text}}" type="checkbox" value="{{$item->id}}" name="choice_id[]">
+                                        <label style="color: {{$profile->warna_text}}">{{$item->name}}</label>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            @endif
+                        @else
                         <h2>Contact Us</h2>
                         <p>You can contact us from this email 
                             @if ($profile !== null)
@@ -825,6 +882,8 @@
                             </div>
                         </div>
                         @endif
+                        @endif
+                        
                     </div>
                     <!-- Start Form -->
                     <div class="col-md-5">

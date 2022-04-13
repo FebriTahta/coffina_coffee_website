@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Profile;
 use App\Models\About;
+use Validator;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -21,62 +22,98 @@ class ProfileController extends Controller
 
     public function store_profile(Request $request)
     {
-        // store file in directory
-        if ($request->icon !== null && $request->logo !== null) {
-            # code...
-            $filename1   = time().'_'.$request->icon->getClientOriginalName();
-            $request->icon->move(public_path('img/icon/'), $filename1);
+        $validator = Validator::make($request->all(), [
+            'email' => 'required',
+            'warna_bg' => 'required',
+            'warna_text' => 'required',
+        ]);
 
-            $filename2   = time().'_'.$request->logo->getClientOriginalName();
-            $request->logo->move(public_path('img/logo/'), $filename2);
+        if ($validator->fails()) {
 
-            $data   = Profile::updateOrCreate(
-                [
-                    'id' => $request->id
-                ],
-                [
-                    'icon'     => $filename1,
-                    'logo'     => $filename2,
-                    'email'    => $request->email
-                ]
-            );
+            return response()->json([
+                'status'    => 400,
+                'message'   => 'Periksa Kembali Inputan Anda',
+                'errors'    => $validator->messages(),
+            ]);
 
-        }elseif ($request->icon !== null && $request->logo == null) {
-            # code...
-            $filename1   = time().'_'.$request->icon->getClientOriginalName();
-            $request->icon->move(public_path('img/icon/'), $filename1);
-
-            $data   = Profile::updateOrCreate(
-                [
-                    'id' => $request->id
-                ],
-                [
-                    'icon'     => $filename1,
-                    'email'    => $request->email
-                ]
-            );
-        }elseif ($request->icon !== null && $request->logo == null) {
-            # code...
-            $filename2   = time().'_'.$request->logo->getClientOriginalName();
-            $request->logo->move(public_path('img/logo/'), $filename2);
-
-            $data   = Profile::updateOrCreate(
-                [
-                    'id' => $request->id
-                ],
-                [
-                    'logo'     => $filename2,
-                    'email'    => $request->email
-                ]
-            );
+        }else {
+            
+            if ($request->warna_bg == "#000000" || $request->warna_text == "#000000") {
+                # code...
+                return response()->json([
+                    'status'    => 400,
+                    'message'   => 'Geser / Ubah warna background dan text. Tidak bisa set data default Hitam Pekat',
+                    'errors'    => 'Geser / Ubah warna background dan text. Tidak bisa set data default Hitam Pekat',
+                ]);
+            }else {
+                # code...
+                // store file in directory
+                if ($request->icon !== null && $request->logo !== null) {
+                    # code...
+                    $filename1   = time().'_'.$request->icon->getClientOriginalName();
+                    $request->icon->move(public_path('img/icon/'), $filename1);
+    
+                    $filename2   = time().'_'.$request->logo->getClientOriginalName();
+                    $request->logo->move(public_path('img/logo/'), $filename2);
+    
+                    $data   = Profile::updateOrCreate(
+                        [
+                            'id' => $request->id
+                        ],
+                        [
+                            'icon'     => $filename1,
+                            'logo'     => $filename2,
+                            'email'    => $request->email,
+                            'warna_bg' => $request->warna_bg,
+                            'warna_text' => $request->warna_text
+                        ]
+                    );
+    
+                }elseif ($request->icon !== null && $request->logo == null) {
+                    # code...
+                    $filename1   = time().'_'.$request->icon->getClientOriginalName();
+                    $request->icon->move(public_path('img/icon/'), $filename1);
+    
+                    $data   = Profile::updateOrCreate(
+                        [
+                            'id' => $request->id
+                        ],
+                        [
+                            'icon'     => $filename1,
+                            'email'    => $request->email,
+                            'warna_bg' => $request->warna_bg,
+                            'warna_text' => $request->warna_text
+                        ]
+                    );
+                }elseif ($request->icon !== null && $request->logo == null) {
+                    # code...
+                    $filename2   = time().'_'.$request->logo->getClientOriginalName();
+                    $request->logo->move(public_path('img/logo/'), $filename2);
+    
+                    $data   = Profile::updateOrCreate(
+                        [
+                            'id' => $request->id
+                        ],
+                        [
+                            'logo'     => $filename2,
+                            'email'    => $request->email,
+                            'warna_bg' => $request->warna_bg,
+                            'warna_text' => $request->warna_text
+                        ]
+                    );
+                }
+    
+                return response()->json(
+                    [
+                    'status'  => 200,
+                    'message' => 'Profile has been updated'
+                    ]
+                );
+            }
+             
+            
         }
-
-        return response()->json(
-            [
-              'status'  => 200,
-              'message' => 'Profile has been updated'
-            ]
-        );
+       
     }
 
     public function store_about(Request $request)

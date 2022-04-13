@@ -73,6 +73,20 @@
                                                     </div>
                                                </div>
                                             </div>
+                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                <div class="row">
+                                                     <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                         <label>Background Color : </label>
+                                                         <input type="color" class="form-control" value="" name="warna_bg" id="warna_bg" required req>
+                                                         <span id="bg_val"> </span>
+                                                     </div>
+                                                     <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                        <label>Text Color : </label>
+                                                        <input type="color" class="form-control" value="" name="warna_text" id="warna_text" required>
+                                                        <span id="text_val"> </span>
+                                                    </div>
+                                                </div>
+                                             </div>
                                             <div class="col-md-12" style="text-align: right;">
                                                 <input type="submit" id="btnadd" class="btn btn-sm btn-info"
                                                     value="SUBMIT!">
@@ -131,6 +145,20 @@
                                                      </div>
                                                 </div>
                                              </div>
+                                             <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                <div class="row">
+                                                     <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                         <label>Background Color : </label>
+                                                         <input type="color" class="form-control" value="{{$profile->warna_bg}}" name="warna_bg" id="warna_bg" required req>
+                                                         <span id="bg_val">{{$profile->warna_bg}} </span>
+                                                     </div>
+                                                     <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                        <label>Text Color : </label>
+                                                        <input type="color" class="form-control" value="{{$profile->warna_text}}" name="warna_text" id="warna_text" required>
+                                                        <span id="text_val">{{$profile->warna_text}} </span>
+                                                    </div>
+                                                </div>
+                                             </div>
                                             <div class="col-md-12" style="text-align: right;">
                                                 <input type="submit" id="btnadd" class="btn btn-sm btn-info"
                                                     value="SUBMIT!">
@@ -155,6 +183,22 @@
     <script>
         $(document).ready(function() {
             $('#textwe').val('woo');
+            
+            let colorButton = document.getElementById("warna_bg");
+            let colorDiv = document.getElementById("bg_val");
+
+            let colorButton2 = document.getElementById("warna_text");
+            let colorDiv2 = document.getElementById("text_val");
+
+            colorButton.oninput = function() {
+                colorDiv.innerHTML = colorButton.value;
+                colorDiv.style.color = colorButton.value;
+            }
+
+            colorButton2.oninput = function() {
+                colorDiv2.innerHTML = colorButton2.value;
+                colorDiv2.style.color = colorButton2.value;
+            }
         })
 
         function showPreview(event) {
