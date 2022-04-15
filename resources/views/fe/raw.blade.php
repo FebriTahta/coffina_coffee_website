@@ -333,12 +333,8 @@
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 @if ($about !== null)
                 <div class="widget">
-                    <h4 class="title"  @if ($profile !== null)
-                    style="color: {{$profile->warna_text}}"
-                @endif>{{$about->title}}</h4>
-                    <p  @if ($profile !== null)
-                    style="color: {{$profile->warna_text}}"
-                @endif>
+                    <h4 class="title">{{$about->title}}</h4>
+                    <p>
                        {!!$about->deskripsi!!}
                     </p>
                 </div>
@@ -499,8 +495,14 @@
                         style="text-decoration-color: {{$profile->warna_text}}"
                     @endif
                     >
-                        <h3>{{$about->title}}</h3>
-                        <p style="text-align: justify; ">
+                        <h3  @if ($profile !== null)
+                        style="color: {{$profile->warna_text}}"
+                    @endif>{{$about->title}}</h3>
+                        <p
+                        @if ($profile !== null)
+                        style="color: {{$profile->warna_text}}; text-align: justify; "
+                        @endif
+                        >
                             {!!$about->deskripsi!!}
                         </p>
                     </div>
@@ -560,9 +562,9 @@
                         @endif>All</button>
                             @foreach ($jenis as $item)
                                 <button 
-                                @if ($profile !== null)
-                                style="color: {{$profile->warna_text}}"
-                            @endif
+                                 @if ($profile !== null)
+                                    style="color: {{$profile->warna_text}}"
+                                @endif
                                 data-filter=".{{$item->slug}}">{{$item->name}}</button>
                             @endforeach
                         </div>
