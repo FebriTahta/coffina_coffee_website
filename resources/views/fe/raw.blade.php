@@ -821,7 +821,7 @@
                     <!-- Single Item -->
                     @foreach ($team as $item)
                     <div class="col-md-4 single-item" >
-                        <div class="item" style="width: 70%">
+                        <div class="item" style="width: 80%">
                             <div class="thumb">
                                 <img src="{{asset('img/team/'.$item->img)}}" alt="Thumb">
                             </div>
