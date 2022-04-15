@@ -440,15 +440,23 @@
 
     <!-- Start About
     ============================================= -->
-    <div class="about-area default-padding bg-gray" id="aboutus">
+    <div class="about-area default-padding bg-gray" id="aboutus" 
+        @if ($profile !== null)
+            style="background-color: {{$profile->warna_bg}}"
+        @endif
+    >
         <div class="container">
             <div class="row">
                 <div class="about-items">
                     @if ($about == null)
-                    <div class="col-md-6 thumb">
+                    <div class="col-md-6 thumb" >
                         <img src="assets/img/800x800.png" alt="Thumb">
                     </div>
-                    <div class="col-md-6 info">
+                    <div class="col-md-6 info" 
+                    @if ($profile !== null)
+                        style="text-decoration-color: {{$profile->warna_text}}"
+                    @endif
+                    >
                         <h3>Our Story</h3>
                         <h2>Until I discovered cooking I was never really interested in anything</h2>
                         <p>
@@ -482,7 +490,11 @@
                     <div class="col-md-4 thumb" style="text-align: right">
                         <img src="{{asset('img/about/'.$about->img)}}" id="img_about"  alt="Thumb">
                     </div>
-                    <div class="col-md-8 info">
+                    <div class="col-md-8 info" 
+                    @if ($profile !== null)
+                        style="text-decoration-color: {{$profile->warna_text}}"
+                    @endif
+                    >
                         <h3>{{$about->title}}</h3>
                         <p style="text-align: justify; ">
                             {!!$about->deskripsi!!}
@@ -744,11 +756,19 @@
     </div>
     <!-- End Food Menu -->
 
-    <div class="chef-area default-padding bottom-less bg-gray" id="team">
+    <div class="chef-area default-padding bottom-less bg-gray" id="team" 
+    @if ($profile !== null)
+        style="background-color: {{$profile->warna_bg}}"
+    @endif
+    >
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <div class="site-heading text-center">
+                    <div class="site-heading text-center"
+                    @if ($profile !== null)
+                        style="text-decoration-color: {{$profile->warna_text}}"
+                    @endif
+                    >
                         <h3>Well Known</h3>
                         <h2>Our Team</h2>
                     </div>
@@ -764,7 +784,11 @@
                             <div class="thumb">
                                 <img src="{{asset('img/team/'.$item->img)}}" alt="Thumb">
                             </div>
-                            <div class="info">
+                            <div class="info" 
+                            @if ($profile !== null)
+                                style="text-decoration-color: {{$profile->warna_text}}"
+                            @endif
+                            >
                                 <div class="overlay">
                                     <h4>{{$item->name}}</h4>
                                     <span>{{$item->position}}</span>
