@@ -101,19 +101,30 @@ class ProfileController extends Controller
                             'warna_text' => $request->warna_text
                         ]
                     );
-                }
-    
-                return response()->json(
+                }else {
+                    # code...
+                    $data   = Profile::updateOrCreate(
+                        [
+                            'id' => $request->id
+                        ],
+                        [
+                            'email'    => $request->email,
+                            'warna_bg' => $request->warna_bg,
+                            'warna_text' => $request->warna_text
+                        ]
+                    );
+
+                    return response()->json(
                     [
                     'status'  => 200,
-                    'message' => 'Profile has been updated'
+                    'message' => 'Profile has been updated',
+                    'warna_bg'=> $data->warna_bg,
+                    'warna_text' => $data->warna_text,
                     ]
                 );
+                }
             }
-             
-            
         }
-       
     }
 
     public function store_about(Request $request)

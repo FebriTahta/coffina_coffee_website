@@ -83,7 +83,7 @@
                                                      <div class="col-xl-6 col-md-6 col-12 mb-1">
                                                         <label>Text Color : </label>
                                                         <input type="color" class="form-control" value="" name="warna_text" id="warna_text" required>
-                                                        <span id="text_val"> </span>
+                                                        <span id="text_val"> </span> 
                                                     </div>
                                                 </div>
                                              </div>
@@ -98,6 +98,7 @@
                             </div>
                         </div>
                     </section>
+                    <input type="hidden" id="parameter" value="kosong">
                     @else
                     <form id="formadd">@csrf
                         <input type="hidden" name="id" value="{{$profile->id}}">
@@ -147,16 +148,16 @@
                                              </div>
                                              <div class="col-xl-6 col-md-6 col-12 mb-1">
                                                 <div class="row">
-                                                     <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                                         <label>Background Color : </label>
-                                                         <input type="color" class="form-control" value="{{$profile->warna_bg}}" name="warna_bg" id="warna_bg" required req>
-                                                         <span id="bg_val">{{$profile->warna_bg}} </span>
-                                                     </div>
-                                                     <div class="col-xl-6 col-md-6 col-12 mb-1">
-                                                        <label>Text Color : </label>
-                                                        <input type="color" class="form-control" value="{{$profile->warna_text}}" name="warna_text" id="warna_text" required>
-                                                        <span id="text_val">{{$profile->warna_text}} </span>
+                                                    <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                        <label>Background Color : </label>
+                                                        <input type="color" class="form-control" value="{{$profile->warna_bg}}" name="warna_bg" id="warna_bg" required req>
+                                                        <span id="bg_val"> {{$profile->warna_bg}} </span>
                                                     </div>
+                                                    <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                                       <label>Text Color : </label>
+                                                       <input type="color" class="form-control" value="{{$profile->warna_text}}" name="warna_text" id="warna_text" required>
+                                                       <span id="text_val"> {{$profile->warna_text}}</span> 
+                                                   </div>
                                                 </div>
                                              </div>
                                             <div class="col-md-12" style="text-align: right;">
@@ -170,6 +171,9 @@
                         </div>
                     </section>
                 </form>
+                <input type="hidden" id="parameter" value="ada">
+                <input type="hidden" id="ada_warna_bg" value="{{$profile->warna_bg}}">
+                <input type="hidden" id="ada_warna_text" value="{{$profile->warna_text}}">
                     @endif
             </div>
         </div>
@@ -182,23 +186,24 @@
     <script src="{{ asset('app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('#textwe').val('woo');
             
-            let colorButton = document.getElementById("warna_bg");
-            let colorDiv = document.getElementById("bg_val");
+                var colorButton = document.getElementById("warna_bg");
+                var colorDiv = document.getElementById("bg_val");
 
-            let colorButton2 = document.getElementById("warna_text");
-            let colorDiv2 = document.getElementById("text_val");
+                var colorButton2 = document.getElementById("warna_text");
+                var colorDiv2 = document.getElementById("text_val");
 
-            colorButton.oninput = function() {
-                colorDiv.innerHTML = colorButton.value;
-                colorDiv.style.color = colorButton.value;
-            }
+                colorButton.oninput = function() {
+                    colorDiv.innerHTML = colorButton.value;
+                    colorDiv.style.color = colorButton.value;
+                }
 
-            colorButton2.oninput = function() {
-                colorDiv2.innerHTML = colorButton2.value;
-                colorDiv2.style.color = colorButton2.value;
-            }
+                colorButton2.oninput = function() {
+                    colorDiv2.innerHTML = colorButton2.value;
+                    colorDiv2.style.color = colorButton2.value;
+                }
+            
+            
         })
 
         function showPreview(event) {
@@ -241,6 +246,13 @@
                         $('#btnadd').val('SUBMIT!');
                         $('#btnadd').attr('disabled', false);
                         window.location.reload();
+
+                        // document.getElementById("warna_bg").value = response.warna_bg;
+                        // document.getElementById("bg_val").value = response.warna_bg;
+
+                        // document.getElementById("warna_text").value = response.warna_bg;
+                        // document.getElementById("text_val").value = response.warna_text;
+                        
                         toastr['success']('👋' + response.message, 'Success!', {
                             closeButton: true,
                             tapToDismiss: false,
