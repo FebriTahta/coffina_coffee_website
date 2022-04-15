@@ -333,8 +333,12 @@
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 @if ($about !== null)
                 <div class="widget">
-                    <h4 class="title">{{$about->title}}</h4>
-                    <p>
+                    <h4 class="title"  @if ($profile !== null)
+                    style="color: {{$profile->warna_text}}"
+                @endif>{{$about->title}}</h4>
+                    <p  @if ($profile !== null)
+                    style="color: {{$profile->warna_text}}"
+                @endif>
                        {!!$about->deskripsi!!}
                     </p>
                 </div>
