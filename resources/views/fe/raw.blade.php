@@ -959,11 +959,11 @@
                                 @endif
                         >
                             <div class="heading">
-                                <h5 
+                                <h3
                                 @if ($profile !== null)
-                                    style="bcolor: {{$profile->warna_text}}"
+                                    style="color: {{$profile->warna_text}}"
                                 @endif
-                                >Drop us a line</h5>
+                                >Drop us a line</h3>
                             </div>
                             
                                 <div class="col-md-12">
