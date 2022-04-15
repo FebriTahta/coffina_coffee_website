@@ -516,22 +516,29 @@
     @endif>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-8 col-md-offset-2" 
+                @if ($profile !== null)
+                    style="color: {{$profile->warna_text}}"
+                @endif
+                >
                     @if ($profile !== null)
-                    <div class="site-heading text-center">
+                    <div class="site-heading text-center"
+                        @if ($profile !== null)
+                        style="color: {{$profile->warna_text}}"
+                    @endif>
                         <h3 style="color:{{$profile->warna_text}}">Discover</h3>
                         <h2 style="color:{{$profile->warna_text}}">Our Coffee</h2>
                         <p style="color:{{$profile->warna_text}}">
-                            We have two variants of coffee menu, including coffee beans, blends and grounds
+                            
                         </p>
                     </div>
                     @else
-                    <div class="site-heading text-center">
+                    <div class="site-heading text-center"  @if ($profile !== null)
+                    style="color: {{$profile->warna_text}}"
+                @endif>
                         <h3>Discover</h3>
                         <h2>Our Coffee</h2>
-                        <p>
-                            We have two variants of coffee menu, including coffee beans, blends and grounds
-                        </p>
+                        
                     </div>
                     @endif
                     
