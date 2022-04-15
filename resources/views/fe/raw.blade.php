@@ -574,7 +574,11 @@
                             <div id="portfolio-grid" class="menu-lists text-center col-3">
                                 <!-- Single Item -->
                                 @foreach ($product as $item)
-                                <div class="item-single pf-item {{$item->jenis->slug}} prod">
+                                <div class="item-single pf-item {{$item->jenis->slug}} prod" 
+                                    @if ($profile !== null)
+                                        style="background-color: {{$profile->warna_text}}"
+                                    @endif
+                                    >
                                     <div class="item">
                                         <div class="thumb">
                                             <a href="#">
@@ -582,14 +586,24 @@
                                             </a>
                                         </div>
                                         <div class="info">
-                                            <h4><a href="#">{{$item->name}}</a></h4>
-                                            <span class="jenis_name">"{{$item->jenis->name}}"</span>
-                                            <p class="jenis_desk">
+                                            <h4><a href="#" 
+                                                @if ($profile !== null)
+                                                style="color: {{$profile->warna_bg}}"
+                                            @endif
+                                            >{{$item->name}}</a></h4>
+                                            <span class="jenis_name" 
+                                            @if ($profile !== null)
+                                            style="color: {{$profile->warna_bg}}"
+                                        @endif
+                                        >"{{$item->jenis->name}}"</span>
+                                            <p class="jenis_desk"  @if ($profile !== null)
+                                            style="color: {{$profile->warna_bg}}"
+                                        @endif>
                                                 {{$item->deskripsi}}
                                             </p>
                                             <div class="button">
                                                 @if ($profile !== null)
-                                                <a href="mailto:{{$profile->email}}" class="ordernow">message</a>
+                                                <a href="mailto:{{$profile->email}}" class="ordernow" style="color: {{$profile->warna_bg}}">message</a>
                                                 @else
                                                 <a href="#email@notfound" class="ordernow"> - mail corp is needed</a>
                                                 @endif
