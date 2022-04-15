@@ -820,7 +820,7 @@
                 <div class="chef-items">
                     <!-- Single Item -->
                     @foreach ($team as $item)
-                    <div class="col-md-3 single-item" style="margin-right: 100px">
+                    <div class="col-md-4 single-item" style="width: 50%">
                         <div class="item">
                             <div class="thumb">
                                 <img src="{{asset('img/team/'.$item->img)}}" alt="Thumb">
