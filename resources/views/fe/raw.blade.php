@@ -953,9 +953,17 @@
                     </div>
                     <!-- Start Form -->
                     <div class="col-md-5">
-                        <div class="form-content">
+                        <div class="form-content"
+                        @if ($profile !== null)
+                                    style="background-color: {{$profile->warna_bg}}"
+                                @endif
+                        >
                             <div class="heading">
-                                <h3>Drop us a line</h3>
+                                <h3 
+                                @if ($profile !== null)
+                                    style="background-color: {{$profile->text}}"
+                                @endif
+                                >Drop us a line</h3>
                             </div>
                             
                                 <div class="col-md-12">
