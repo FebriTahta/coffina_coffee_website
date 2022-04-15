@@ -816,7 +816,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" style="text-align: center">
                 <div class="chef-items" style="text-align: center">
                     <!-- Single Item -->
                     @foreach ($team as $item)
