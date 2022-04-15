@@ -961,7 +961,7 @@
                             <div class="heading">
                                 <h3 
                                 @if ($profile !== null)
-                                    style="background-color: {{$profile->text}}"
+                                    style="bcolor: {{$profile->warna_text}}"
                                 @endif
                                 >Drop us a line</h3>
                             </div>
