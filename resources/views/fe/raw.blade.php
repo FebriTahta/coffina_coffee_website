@@ -545,13 +545,20 @@
                 </div>
             </div>
             @if ($jenis->count() > 0 && $product->count() > 0)
-            <div class="food-menu-area text-center">
+            <div class="food-menu-area text-center"  @if ($profile !== null)
+            style="color: {{$profile->warna_text}}"
+        @endif>
                 <div class="row">
                     <div class="col-md-12 food-menu-content">
                         <div class="mix-item-menu text-center">
-                            <button class="active" data-filter="*">All</button>
+                            <button class="active" data-filter="*"  @if ($profile !== null)
+                            style="color: {{$profile->warna_text}}"
+                        @endif>All</button>
                             @foreach ($jenis as $item)
                                 <button 
+                                @if ($profile !== null)
+                                style="color: {{$profile->warna_text}}"
+                            @endif
                                 data-filter=".{{$item->slug}}">{{$item->name}}</button>
                             @endforeach
                         </div>
