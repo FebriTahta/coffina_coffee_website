@@ -575,11 +575,12 @@
                                 <!-- Single Item -->
                                 @foreach ($product as $item)
                                 <div class="item-single pf-item {{$item->jenis->slug}} prod" 
-                                    @if ($profile !== null)
-                                        style="background-color: {{$profile->warna_text}}"
-                                    @endif
+                                   
                                     >
-                                    <div class="item">
+                                    <div class="item"
+                                    @if ($profile !== null)
+                                    style="background-color: {{$profile->warna_text}}"
+                                @endif>
                                         <div class="thumb">
                                             <a href="#">
                                                 <img src="{{asset('img/product/'.$item->img)}}" alt="Thumb">
