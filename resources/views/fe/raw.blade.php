@@ -804,8 +804,14 @@
                         style="text-decoration-color: {{$profile->warna_text}}"
                     @endif
                     >
-                        <h3>Well Known</h3>
-                        <h2>Our Team</h2>
+                        <h3 
+                        @if ($profile !== null)
+                        style="color: {{$profile->warna_text}}"
+                    @endif>Well Known</h3>
+                        <h2 
+                        @if ($profile !== null)
+                        style="color: {{$profile->warna_text}}"
+                    @endif>Our Team</h2>
                     </div>
                 </div>
             </div>
@@ -814,7 +820,7 @@
                 <div class="chef-items">
                     <!-- Single Item -->
                     @foreach ($team as $item)
-                    <div class="col-md-4 single-item">
+                    <div class="col-md-3 single-item">
                         <div class="item">
                             <div class="thumb">
                                 <img src="{{asset('img/team/'.$item->img)}}" alt="Thumb">
