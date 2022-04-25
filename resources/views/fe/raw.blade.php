@@ -832,7 +832,7 @@
                             >
                                 <div class="overlay">
                                     <h4 >{{$item->name}}</h4>
-                                    <span style="font-size: 14px">{{$item->position}}</span>
+                                    <p style="font-size: 14px">{{$item->position}}</p>
                                 </div>
                                 <div class="content" style="color: {{$profile->warna_text}}">
                                     <p style="color:  {{$profile->warna_bg}}">
