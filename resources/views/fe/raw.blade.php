@@ -820,7 +820,7 @@
                 <div class="chef-items">
                     <!-- Single Item -->
                     @foreach ($team as $item)
-                    <div class="col-md-4 single-item" style="padding: 50px">
+                    <div class="col-md-4 single-item" style="padding: 60px">
                         <div class="item" style="text-align: center; align-content: center; align-items: center">
                             <div class="thumb">
                                 <img src="{{asset('img/team/'.$item->img)}}" alt="Thumb">
@@ -832,7 +832,7 @@
                             >
                                 <div class="overlay">
                                     <h4 >{{$item->name}}</h4>
-                                    <span >{{$item->position}}</span>
+                                    <span style="color: {{$item->warna_bg}}">{{$item->position}}</span>
                                 </div>
                                 <div class="content" style="color: {{$profile->warna_text}}">
                                     <p style="color:  {{$profile->warna_bg}}">
