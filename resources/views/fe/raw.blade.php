@@ -835,7 +835,7 @@
                                     <span >{{$item->position}}</span>
                                 </div>
                                 <div class="content" style="color: {{$profile->warna_text}}">
-                                    <p >
+                                    <p style="color:  {{$profile->warna_bg}}">
                                         {!!$item->deskripsi!!}
                                     </p>
                                     <ul>
