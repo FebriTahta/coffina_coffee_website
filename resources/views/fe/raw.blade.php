@@ -827,7 +827,7 @@
                             </div>
                             <div class="info" 
                             @if ($profile !== null)
-                                style="text-decoration-color: {{$profile->warna_text}}"
+                                style="color: {{$profile->warna_text}}"
                             @endif
                             >
                                 <div class="overlay">
