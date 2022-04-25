@@ -822,7 +822,7 @@
                     @foreach ($team as $item)
                     <div class="col-md-4 single-item" style="padding: 60px; ">
                         <div class="item" style="text-align: center; align-content: center; align-items: center">
-                            <div class="thumb">
+                            <div class="thumb" style="border-radius: 50%">
                                 <img src="{{asset('img/team/'.$item->img)}}" alt="Thumb">
                             </div>
                             <div class="info" 
