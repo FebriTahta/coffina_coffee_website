@@ -831,11 +831,11 @@
                             @endif
                             >
                                 <div class="overlay">
-                                    <h4>{{$item->name}}</h4>
-                                    <span>{{$item->position}}</span>
+                                    <h4 style="color: {{$profile->warna_bg}}">{{$item->name}}</h4>
+                                    <span style="color: {{$profile->warna_bg}}">{{$item->position}}</span>
                                 </div>
                                 <div class="content">
-                                    <p>
+                                    <p style="color: {{$profile->warna_bg}}">
                                         {!!$item->deskripsi!!}
                                     </p>
                                     <ul>
@@ -846,7 +846,7 @@
                                             @else
                                                 @foreach ($item->sosmed as $sosmed)
                                                 <li class="{{$sosmed->name}}">
-                                                    <a href="{{$sosmed->link}}" target="_blank"><i class="fab fa-{{$sosmed->name}}"></i></a>
+                                                    <a href="{{$sosmed->link}}" target="_blank"><i class="fab fa-{{$sosmed->name}}" style="color: {{$profile->warna_bg}}"></i></a>
                                                 </li>
                                                 @endforeach
                                         @endif
