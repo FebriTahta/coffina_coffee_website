@@ -820,14 +820,14 @@
                 <div class="chef-items">
                     <!-- Single Item -->
                     @foreach ($team as $item)
-                    <div class="col-md-4 single-item" style="padding: 60px; min-height: 400px">
+                    <div class="col-md-4 single-item" style="padding: 60px; ">
                         <div class="item" style="text-align: center; align-content: center; align-items: center">
                             <div class="thumb">
                                 <img src="{{asset('img/team/'.$item->img)}}" alt="Thumb">
                             </div>
                             <div class="info" 
                             @if ($profile !== null)
-                                style="background-color: {{$profile->warna_text}}"
+                                style="background-color: {{$profile->warna_text}}; min-height: 400px"
                             @endif
                             >
                                 <div class="overlay">
