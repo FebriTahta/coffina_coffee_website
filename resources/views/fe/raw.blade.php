@@ -830,7 +830,7 @@
                                 style="color: {{$profile->warna_text}}"
                             @endif
                             >
-                                <div class="overlay" style="color: {{$profile->warna_text}}">
+                                <div class="overlay" style="background-color: {{$profile->warna_text}}">
                                     <h4 style="color: {{$profile->warna_bg}}">{{$item->name}}</h4>
                                     <span style="color: {{$profile->warna_bg}}">{{$item->position}}</span>
                                 </div>
