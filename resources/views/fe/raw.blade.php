@@ -827,15 +827,15 @@
                             </div>
                             <div class="info" 
                             @if ($profile !== null)
-                                style="color: {{$profile->warna_text}}"
+                                style="background-color: {{$profile->warna_text}}"
                             @endif
                             >
-                                <div class="overlay" style="background-color: {{$profile->warna_text}}">
-                                    <h4 style="color: {{$profile->warna_bg}}">{{$item->name}}</h4>
-                                    <span style="color: {{$profile->warna_bg}}">{{$item->position}}</span>
+                                <div class="overlay">
+                                    <h4 >{{$item->name}}</h4>
+                                    <span >{{$item->position}}</span>
                                 </div>
-                                <div class="content">
-                                    <p style="color: {{$profile->warna_bg}}">
+                                <div class="content" style="color: {{$profile->warna_text}}">
+                                    <p >
                                         {!!$item->deskripsi!!}
                                     </p>
                                     <ul>
