@@ -832,7 +832,7 @@
                             >
                                 <div class="overlay">
                                     <h4 >{{$item->name}}</h4>
-                                    <p class="btn btn-outline-primary" disabled style="font-size: 14px">{{$item->position}}</p>
+                                    <p class="btn btn-outline-primary" disabled style="font-size: 12px">{{$item->position}}</p>
                                 </div>
                                 <div class="content" style="color: {{$profile->warna_text}}">
                                     <p style="color:  {{$profile->warna_bg}}">
