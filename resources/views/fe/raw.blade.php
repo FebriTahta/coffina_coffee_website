@@ -827,7 +827,7 @@
                             </div>
                             <div class="info" 
                             @if ($profile !== null)
-                                style="background-color: {{$profile->warna_text}}; min-height: 300px"
+                                style="border-radius: 20px;background-color: {{$profile->warna_text}}; min-height: 280px;"
                             @endif
                             >
                                 <div class="overlay">
