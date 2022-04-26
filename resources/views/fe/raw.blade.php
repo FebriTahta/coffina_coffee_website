@@ -289,8 +289,8 @@
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu" style="background-color: {{$profile->warna_bg}}">
-                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                <div class="collapse navbar-collapse" id="navbar-menu" >
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#" style="background-color: {{$profile->warna_bg}}">
                         <li>
                             <a href="/">home</a>
                         </li>
