@@ -128,7 +128,7 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-n
 }
 
 nav.navbar.bootsnav {
-  background-color: #fff;
+  background-color: rgb(53, 38, 38);
   border-radius: 0;
   border: none;
   box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
