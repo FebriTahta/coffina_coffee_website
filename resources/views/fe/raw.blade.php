@@ -830,9 +830,9 @@
                                 style="border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;background-color: {{$profile->warna_text}}; min-height: 280px;"
                             @endif
                             >
-                                <div class="overlay">
+                                <div class="overlay" style="background-color: {{$item->warna_text}}">
                                     <h4 >{{$item->name}}</h4>
-                                    <p class="btn btn-outline-primary" disabled style="font-size: 12px">{{$item->position}}</p>
+                                    <p class="btn btn-outline-primary" disabled style="font-size: 12px; color: {{$item->warna_bg}}">{{$item->position}}</p>
                                 </div>
                                 <div class="content" style="color: {{$profile->warna_text}}">
                                     <p style="color:  {{$profile->warna_bg}}">
