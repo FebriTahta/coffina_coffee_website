@@ -258,7 +258,7 @@
 
     </header> --}}
     <!-- End Header -->
-    <header id="home">
+    <header id="home" style="background-color: {{$profile->warna_bg}}">
         <!-- Start Navigation -->
         <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent">
 
@@ -290,7 +290,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu" >
-                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#" style="background-color: {{$profile->warna_bg}}">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#" >
                         <li>
                             <a href="/">home</a>
                         </li>
