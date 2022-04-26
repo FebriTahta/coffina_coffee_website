@@ -107,11 +107,11 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full {
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full ul.nav > li > a {
-    color: #381818 !important;
+    color: #ffffff;
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-nav i {
-    color: #5e2b2b !important;
+    color: #ffffff;
 }
 
 .attr-nav ul.cart-list li.total a {

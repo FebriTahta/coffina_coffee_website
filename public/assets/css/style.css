@@ -649,7 +649,7 @@ header nav.navbar.border.bootsnav.navbar-fixed.no-background .attr-nav ul li a {
 }
 
 header nav.navbar.border.bootsnav.navbar-fixed.no-background ul li a::after {
-  background: #ffffff none repeat scroll 0 0;
+  background: #413434 none repeat scroll 0 0;
   bottom: -2px;
   content: "";
   height: 3px;
