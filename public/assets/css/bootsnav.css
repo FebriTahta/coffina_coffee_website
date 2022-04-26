@@ -245,7 +245,7 @@ nav.bootsnav.navbar-full .navbar-collapse .nav-full {
 nav.bootsnav.navbar-full .navbar-collapse .wrap-full-menu {
   display: table-cell;
   vertical-align: middle;
-  background-color: #fff;
+  background-color: rgb(87, 75, 75);
   overflow: auto;
 }
 
