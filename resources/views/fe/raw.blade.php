@@ -82,9 +82,21 @@
             #header {
                 display: none;
             }
+            nav.navbar.bootsnav ul.nav>li>a {
+                color : <?php echo $profile->warna_text?>;
+                background-color: transparent !important;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
         }
 
         @media (max-width:450px) {
+            nav.navbar.bootsnav ul.nav>li>a {
+                /* color : <?php echo $profile->warna_text?>; */
+                background-color: transparent !important;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
             #img_about {
                 width: 100%;
             }
@@ -257,12 +269,7 @@
             margin: 0;
         }
 
-        /* nav.navbar.bootsnav ul.nav>li>a {
-            color : <?php echo $profile->warna_text?>;
-            background-color: transparent !important;
-            text-transform: uppercase;
-            font-weight: 600;
-        } */
+        
 
         nav.navbar.bootsnav.bg-dark ul.nav>li>a {
             color: #ffffff;
