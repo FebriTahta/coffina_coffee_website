@@ -5,6 +5,7 @@ nav.bootsnav .dropdown.megamenu-fw {
 
 nav.bootsnav .container {
   position: relative;
+  background-color: #0077b5;
 }
 
 nav.bootsnav .megamenu-fw .dropdown-menu {
@@ -17,7 +18,7 @@ nav.bootsnav .megamenu-content {
 }
 
 nav.navbar.navbar-default.no-background.inc-border.bootsnav {
-    border-bottom: 1px solid #3d3535;
+    border-bottom: 1px solid #e7e7e7;
 }
 
 nav.bootsnav .megamenu-content .title {
