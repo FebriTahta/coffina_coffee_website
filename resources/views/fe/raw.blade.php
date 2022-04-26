@@ -240,7 +240,7 @@
         }
 
         nav.navbar.bootsnav {
-            background-color: #fff;
+            background-color: rgb(100, 55, 55);
             border-radius: 0;
             border: none;
             box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
