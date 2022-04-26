@@ -17,7 +17,7 @@ nav.bootsnav .megamenu-content {
 }
 
 nav.navbar.navbar-default.no-background.inc-border.bootsnav {
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #3d3535;
 }
 
 nav.bootsnav .megamenu-content .title {
@@ -107,11 +107,11 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full {
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full ul.nav > li > a {
-    color: #816767;
+    color: #ffffff;
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-nav i {
-    color: #917c7c;
+    color: #ffffff;
 }
 
 .attr-nav ul.cart-list li.total a {
@@ -128,7 +128,7 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-n
 }
 
 nav.navbar.bootsnav {
-  background-color: rgb(126, 110, 110);
+  background-color: #fff;
   border-radius: 0;
   border: none;
   box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
@@ -152,7 +152,7 @@ nav.navbar.bootsnav ul.nav > li > a {
 }
 
 nav.navbar.bootsnav.bg-dark ul.nav > li > a {
-  color: #837070;
+  color: #ffffff;
 }
 
 nav.navbar.bootsnav ul.nav li.megamenu-fw > a:hover, 
@@ -245,7 +245,7 @@ nav.bootsnav.navbar-full .navbar-collapse .nav-full {
 nav.bootsnav.navbar-full .navbar-collapse .wrap-full-menu {
   display: table-cell;
   vertical-align: middle;
-  background-color: rgb(87, 75, 75);
+  background-color: #fff;
   overflow: auto;
 }
 
@@ -1702,13 +1702,13 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav.navbar-transparent.pad-top {
-    background: #493e3e none repeat scroll 0 0 !important;
+    background: #ffffff none repeat scroll 0 0 !important;
     border-bottom: none !important;
     margin-top: 0 !important;
   }
 
   nav.navbar.bootsnav.attr-border .navbar-header {
-    border-bottom: 1px solid #524343;
+    border-bottom: 1px solid #e7e7e7;
   }
 
   nav.navbar.attr-border .attr-nav,
