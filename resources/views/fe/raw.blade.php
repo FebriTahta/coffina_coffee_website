@@ -258,9 +258,9 @@
 
     </header> --}}
     <!-- End Header -->
-    <header id="home" style="background-color: {{$profile->warna_bg}}">
+    <header id="home" >
         <!-- Start Navigation -->
-        <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent">
+        <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent" style="background-color: {{$profile->warna_bg}}">
 
             <div class="container">
 
