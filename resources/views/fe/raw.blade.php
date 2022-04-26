@@ -239,7 +239,16 @@
             color: #ffffff !important;
         }
 
-        
+        /* nav.navbar.bootsnav {
+            background-color: #fff;
+            border-radius: 0;
+            border: none;
+            box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            -moz-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            margin: 0;
+        } */
 
         nav.bg-dark.navbar.bootsnav {
             background-color: #1c1c1c;
@@ -980,6 +989,7 @@
             -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
             -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
             top: 0;
+            background-color: #0077b5;
         }
 
         nav.navbar.bootsnav.navbar-fixed.nav-box.no-background {
