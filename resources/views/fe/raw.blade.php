@@ -2873,7 +2873,7 @@
 </head>
 
 <body>
-    {{$nav_color}}
+
     <!-- Preloader Start -->
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
@@ -3027,6 +3027,18 @@
     </header> --}}
     <!-- End Header -->
     <header id="home">
+        <style>
+            nav.navbar.bootsnav {
+                background-color: '.$profile->warna_bg.';
+                border-radius: 0;
+                border: none;
+                box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                -moz-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                margin: 0;
+            }
+        </style>
         <!-- Start Navigation -->
         <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent">
 
