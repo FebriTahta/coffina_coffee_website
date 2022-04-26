@@ -142,7 +142,7 @@
                 </ul>
             </div>
 
-            <img src="assets/img/perfil.png" alt="" class="nav__img">
+            <img src="assets/img/profile.png" alt="" class="nav__img">
         </nav>
     </header>
     <!-- Header
