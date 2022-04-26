@@ -241,6 +241,7 @@
 
         nav.navbar.bootsnav {
             background-color: <?php echo $profile->warna_bg?>;
+            color : <?php echo $profile->warna_text?>;
             border-radius: 0;
             border: none;
             box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
