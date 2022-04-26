@@ -107,11 +107,11 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full {
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full ul.nav > li > a {
-    color: #ffffff;
+    color: #332727;
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-nav i {
-    color: #ffffff;
+    color: #472f2f;
 }
 
 .attr-nav ul.cart-list li.total a {
@@ -876,11 +876,10 @@ nav.navbar.bootsnav.navbar-fixed {
   -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
   -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
   top: 0;
-  background: #524545 none repeat scroll 0 0;
 }
 
 nav.navbar.bootsnav.navbar-fixed.nav-box.no-background {
-  background: #524545 none repeat scroll 0 0;
+  background: #ffffff none repeat scroll 0 0;
   top: 50px;
   width: auto;
   left: auto;
