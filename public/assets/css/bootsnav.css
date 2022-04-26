@@ -55,7 +55,7 @@ nav.navbar.navbar-default.bootsnav.brand-top .navbar-header .navbar-brand {
 nav.navbar .quote-btn a {
   background: #e7272d none repeat scroll 0 0;
   border-radius: 5px;
-  color: #ffffff;
+  color: #472d2d;
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
@@ -107,11 +107,11 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full {
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full ul.nav > li > a {
-    color: #ffffff;
+    color: #472d2d;
 }
 
 nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-nav i {
-    color: #ffffff;
+    color: #472d2d;
 }
 
 .attr-nav ul.cart-list li.total a {
@@ -119,12 +119,12 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-n
   display: inline-block;
   font-weight: 600 !important;
   padding: 12px 15px;
-  color: #ffffff !important;
+  color: #472d2d !important;
 }
 
 .attr-nav ul.cart-list li.total a:hover {
   background: #e7272d none repeat scroll 0 0 !important;
-  color: #ffffff !important;
+  color: #472d2d !important;
 }
 
 nav.navbar.bootsnav {
@@ -152,7 +152,7 @@ nav.navbar.bootsnav ul.nav > li > a {
 }
 
 nav.navbar.bootsnav.bg-dark ul.nav > li > a {
-  color: #ffffff;
+  color: #472d2d;
 }
 
 nav.navbar.bootsnav ul.nav li.megamenu-fw > a:hover, 
@@ -332,7 +332,7 @@ nav.navbar.attr-border .attr-nav {
 
 .navbar.bootsnav .attr-nav li.btn a {
   background: #e7272d none repeat scroll 0 0;
-  color: #ffffff;
+  color: #472d2d;
   display: inline-block;
   font-size: 13px;
   font-weight: 600;
@@ -407,7 +407,7 @@ nav.navbar.attr-border.bootsnav.sticked .attr-nav {
 
 .attr-nav > ul > li > a span.badge {
   background-color: #e7272d;
-  color: #ffffff;
+  color: #472d2d;
   height: 20px;
   line-height: 20px;
   margin-top: -5px;
@@ -527,7 +527,7 @@ ul.cart-list > li.total > span {
 }
 
 .top-search {
-  background-color: #ffffff;
+  background-color: #472d2d;
   border: medium none;
   border-radius: 30px;
   box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.5);
@@ -586,7 +586,7 @@ body {
   padding: 50px;
   height: 100%;
   display: block;
-  background-color: #ffffff;
+  background-color: #472d2d;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -666,7 +666,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle::after {
 }
 
 .navbar .side .widget.social li a {
-  color: #ffffff;
+  color: #472d2d;
   display: inline-block;
   font-weight: 500;
   height: 45px;
@@ -681,7 +681,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle::after {
 
 .navbar .side .widget.social li a:hover {
   background: #e7272d none repeat scroll 0 0;
-  color: #ffffff;
+  color: #472d2d;
 }
 
 .navbar.color-yellow .side .widget.social li a:hover {
@@ -851,7 +851,7 @@ nav.navbar.bootsnav .share ul > li > a {
 
 nav.navbar.bootsnav .share.dark ul > li > a {
   background-color: #e7272d;
-  color: #ffffff;
+  color: #472d2d;
 }
 
 nav.navbar.bootsnav.color-yellow .share.dark ul > li > a {
@@ -879,7 +879,7 @@ nav.navbar.bootsnav.navbar-fixed {
 }
 
 nav.navbar.bootsnav.navbar-fixed.nav-box.no-background {
-  background: #ffffff none repeat scroll 0 0;
+  background: #472d2d none repeat scroll 0 0;
   top: 50px;
   width: auto;
   left: auto;
@@ -1044,7 +1044,7 @@ nav.navbar.bootsnav {
   nav.navbar.bootsnav.active-full ul.nav > li > a.active,
     nav.navbar.bootsnav.active-full ul.nav > li > a:hover {
     background: #e7272d none repeat scroll 0 0 !important;
-    color: #ffffff;
+    color: #472d2d;
   }
 
   nav.navbar.bootsnav.active-full.color-yellow ul.nav > li > a.active,
@@ -1053,7 +1053,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav.active-full ul.nav > li.active > a:hover {
-    color: #ffffff;
+    color: #472d2d;
   }
 
   nav.navbar.bootsnav ul.nav > li > a:hover {
@@ -1073,8 +1073,8 @@ nav.navbar.bootsnav {
   }
 
   .social-links.sl-default a {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid #472d2d;
+    color: #472d2d;
     display: inline-block;
     float: left;
     height: 30px;
@@ -1524,7 +1524,7 @@ nav.navbar.bootsnav {
   }
 
   nav.bootsnav.navbar-sidebar.bg-dark ul.nav > li > a {
-    color: #ffffff;
+    color: #472d2d;
   }
 
   nav.bootsnav.navbar-sidebar ul.nav > li > a:hover {
@@ -1702,7 +1702,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav.navbar-transparent.pad-top {
-    background: #ffffff none repeat scroll 0 0 !important;
+    background: #472d2d none repeat scroll 0 0 !important;
     border-bottom: none !important;
     margin-top: 0 !important;
   }
@@ -1763,7 +1763,7 @@ nav.navbar.bootsnav {
 
   nav.navbar.shadow.navbar-inverse.bootsnav.navbar-transparent.dark, 
   nav.navbar.shadow.bootsnav.navbar-transparent.dark {
-    background-color: #ffffff !important;
+    background-color: #472d2d !important;
     border-bottom: medium none navy;
   }
 
@@ -1776,7 +1776,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav.no-background.wt-bar {
-    background-color: #ffffff;
+    background-color: #472d2d;
     margin: 0;
     position: relative;
     top: 0 !important;
@@ -1792,7 +1792,7 @@ nav.navbar.bootsnav {
   }
 
   nav.bg-dark.navbar.bootsnav .navbar-toggle {
-    color: #ffffff;
+    color: #472d2d;
   }
 
   nav.bg-dark.navbar.bootsnav ul.nav > li > a {
@@ -1828,7 +1828,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav .navbar-collapse.collapse.in {
-    background: #ffffff none repeat scroll 0 0;
+    background: #472d2d none repeat scroll 0 0;
     display: block;
     margin-bottom: 30px;
   }
@@ -2331,7 +2331,7 @@ nav.navbar.bootsnav {
 .attr-nav.menu li:last-child a {
   background: #e7272d none repeat scroll 0 0;
   border-radius: 30px;
-  color: #ffffff !important;
+  color: #472d2d !important;
   padding: 5px 20px !important;
 }
 
@@ -2350,7 +2350,7 @@ nav.bootsnav.navbar-default.info-topbar.sticked .attr-nav ul li a {
 }
 
 nav.navbar.bootsnav.bg-dark .attr-nav > ul > li > a {
-  color: #ffffff;
+  color: #472d2d;
 }
 
 ul.cart-list > li.total > .btn {
