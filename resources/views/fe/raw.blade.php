@@ -51,7 +51,7 @@
     <link href="{{asset('assets/css/owl.carousel.min.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/owl.theme.default.min.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/animate.css')}}" rel="stylesheet" />
-    {{-- <link href="{{asset('assets/css/bootsnav.css')}}" rel="stylesheet" /> --}}
+    <link href="{{asset('assets/css/bootsnav.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
