@@ -257,12 +257,12 @@
             margin: 0;
         }
 
-        nav.navbar.bootsnav ul.nav>li>a {
+        /* nav.navbar.bootsnav ul.nav>li>a {
             color : <?php echo $profile->warna_text?>;
             background-color: transparent !important;
             text-transform: uppercase;
             font-weight: 600;
-        }
+        } */
 
         nav.navbar.bootsnav.bg-dark ul.nav>li>a {
             color: #ffffff;
