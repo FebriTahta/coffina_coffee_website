@@ -260,7 +260,7 @@
     <!-- End Header -->
     <header id="home" >
         <!-- Start Navigation -->
-        <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent" style="background-color: bisque">
+        <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent" >
 
             <div class="container">
 
