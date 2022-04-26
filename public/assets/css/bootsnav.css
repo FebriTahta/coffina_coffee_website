@@ -128,7 +128,7 @@ nav.navbar.navbar-default.navbar-theme.navbar-sticky.bootsnav.on.no-full .attr-n
 }
 
 nav.navbar.bootsnav {
-  background-color: #fff;
+  background-color: rgb(126, 110, 110);
   border-radius: 0;
   border: none;
   box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
@@ -152,7 +152,7 @@ nav.navbar.bootsnav ul.nav > li > a {
 }
 
 nav.navbar.bootsnav.bg-dark ul.nav > li > a {
-  color: #ffffff;
+  color: #837070;
 }
 
 nav.navbar.bootsnav ul.nav li.megamenu-fw > a:hover, 
