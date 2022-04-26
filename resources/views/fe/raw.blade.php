@@ -258,7 +258,7 @@
         }
 
         nav.navbar.bootsnav ul.nav>li>a {
-            /* color : <?php echo $profile->warna_text?>; */
+            color : <?php echo $profile->warna_text?>;
             background-color: transparent !important;
             text-transform: uppercase;
             font-weight: 600;
