@@ -3334,10 +3334,10 @@
                         <div class="col-md-12 food-menu-content">
                             <div class="mix-item-menu text-center">
                                 <button class="active" data-filter="*"
-                                    @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>All</button>
+                                    @if ($profile !== null) style="color: {{ $profile->warna_text }}" @endif>All</button>
                                 @foreach ($jenis as $item)
                                     <button
-                                        @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif
+                                        @if ($profile !== null) style="color: {{ $profile->warna_text }}" @endif
                                         data-filter=".{{ $item->slug }}">{{ $item->name }}</button>
                                 @endforeach
                             </div>
