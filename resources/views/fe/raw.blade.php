@@ -3027,7 +3027,7 @@
     </header> --}}
     <!-- End Header -->
     <header id="home">
-        <style>
+        {{-- <style>
             nav.navbar.bootsnav {
                 background-color: '.$profile->warna_bg.';
                 border-radius: 0;
@@ -3038,7 +3038,7 @@
                 -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
                 margin: 0;
             }
-        </style>
+        </style> --}}
         <!-- Start Navigation -->
         <nav class="navbar navbar-default navbar-fixed dark bootsnav shadow-less on no-full navbar-transparent">
 
