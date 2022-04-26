@@ -69,7 +69,6 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 
-    {{$nav_color}}
     <style>
         @media (min-width: 451px) {
             #img_about {
@@ -240,7 +239,7 @@
             color: #ffffff !important;
         }
 
-        /* nav.navbar.bootsnav {
+        nav.navbar.bootsnav {
             background-color: #fff;
             border-radius: 0;
             border: none;
@@ -249,7 +248,7 @@
             -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
             -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
             margin: 0;
-        } */
+        }
 
         nav.bg-dark.navbar.bootsnav {
             background-color: #1c1c1c;
