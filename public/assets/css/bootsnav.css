@@ -5,7 +5,6 @@ nav.bootsnav .dropdown.megamenu-fw {
 
 nav.bootsnav .container {
   position: relative;
-  background-color: #0077b5;
 }
 
 nav.bootsnav .megamenu-fw .dropdown-menu {
@@ -880,7 +879,7 @@ nav.navbar.bootsnav.navbar-fixed {
 }
 
 nav.navbar.bootsnav.navbar-fixed.nav-box.no-background {
-  background: #ffffff none repeat scroll 0 0;
+  background: #524545 none repeat scroll 0 0;
   top: 50px;
   width: auto;
   left: auto;
