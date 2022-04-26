@@ -239,7 +239,7 @@
             color: #ffffff !important;
         }
 
-        nav.navbar.bootsnav {
+        /* nav.navbar.bootsnav {
             background-color: #fff;
             border-radius: 0;
             border: none;
@@ -248,7 +248,7 @@
             -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
             -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
             margin: 0;
-        }
+        } */
 
         nav.bg-dark.navbar.bootsnav {
             background-color: #1c1c1c;
@@ -2873,7 +2873,7 @@
 </head>
 
 <body>
-
+    {{$nav_color}}
     <!-- Preloader Start -->
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
