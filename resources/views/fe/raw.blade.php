@@ -301,7 +301,7 @@
         }
 
         ul.menu-col li a {
-            color: #333333;
+            color : <?php echo $profile->warna_text?>;
         }
 
         ul.menu-col li a:hover,
