@@ -3362,7 +3362,7 @@
                                                     <span class="jenis_name"
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>"{{ $item->jenis->name }}"</span>
                                                     <hr>
-                                                    <div style="text-align: left">
+                                                    <div style="text-align: left; margin-top: 10px">
                                                         <p class="jenis_desk"
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>
                                                         {!! $item->deskripsi !!}
