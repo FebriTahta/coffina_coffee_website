@@ -44,13 +44,13 @@
                                     @csrf
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                                 <label for="">Name</label>
                                                 <input type="text" class="form-control" name="name" required>
                                             </div>
-                                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                                 <label for="">Deskripsi</label>
-                                                <textarea name="deskripsi" class="form-control" id="" cols="30" rows="3"></textarea>
+                                                <textarea name="deskripsi" class="form-control summernote" id="" cols="30" rows="3"></textarea>
                                             </div>
                                             <div class="col-xl-6 col-md-6 col-12 mb-1">
                                                 <div class="form-group">
@@ -179,7 +179,7 @@
                     @csrf
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                 <div class="form-group">
                                     <input type="hidden" name="id" id="id" required>
                                     <label for="basicInput">name</label>
@@ -187,10 +187,10 @@
                                         placeholder="Mini Title" />
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                 <div class="form-group">
                                     <label for="helpInputTop">Deskripsi</label>
-                                    <textarea name="deskripsi" id="deskripsi" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="deskripsi" id="deskripsi" cols="30" rows="3" class="form-control summernote"></textarea>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 mb-1">
@@ -228,6 +228,8 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('app-assets/css/plugins/extensions/ext-component-toastr.css') }}">
     <script src="{{ asset('app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <script>
         function showPreview(event) {
             if (event.target.files.length > 0) {
@@ -237,6 +239,14 @@
                 preview.style.display = "block";
             }
         }
+
+        $(document).ready(function() {
+                $('.summernote').summernote({
+                    placeholder: 'Deskripsi...',
+                    tabsize: 2,
+                    height: 200
+                });
+            });
 
         function showPreview2(event) {
             if (event.target.files.length > 0) {
@@ -257,7 +267,8 @@
             var modal = $(this)
             modal.find('.modal-content #id').val(id);
             modal.find('.modal-content #name').val(name);
-            modal.find('.modal-content #deskripsi').val(deskripsi);
+            // modal.find('.modal-content #deskripsi').val(deskripsi);
+            $('#deskripsi').summernote('code',deskripsi);
             document.getElementById('imgpreview').src = src;
             console.log(src);
         })
