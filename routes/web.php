@@ -28,8 +28,43 @@ Route::get('/', function () {
         # code...
         $slider = Slider::all();
     }
+
+    $profile = App\Models\Profile::first();
+    $nav_color;
+    if ($profile !== null) {
+        # code...
+        $nav_color = '
+        <style>
+            nav.navbar.bootsnav {
+                background-color: '.$profile->warna_bg.';
+                border-radius: 0;
+                border: none;
+                box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                -moz-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+                margin: 0;
+            }
+        </style>
+        ';
+    }else {
+        $nav_color = '
+        <style>
+        nav.navbar.bootsnav {
+            background-color: #fff;
+            border-radius: 0;
+            border: none;
+            box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            -moz-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            -o-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+            margin: 0;
+        }
+        </style>
+        ';
+    }
     
-    return view('fe.raw',compact('slider','slide'));
+    return view('fe.raw',compact('slider','slide','nav_color'));
     // return view('layouts.raw_backend');
     // return view('be.slider');
 });
