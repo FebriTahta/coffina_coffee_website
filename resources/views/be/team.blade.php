@@ -54,7 +54,7 @@
                                             </div>
                                             <div class="col-xl-6 col-md-6 col-12 mb-1">
                                                 <label for="">Deskripsi</label>
-                                                <textarea name="deskripsi" class="form-control" id="" cols="30" rows="3"></textarea>
+                                                <textarea name="deskripsi" class="form-control summernote" id="deskripsi_add" cols="30" rows="3"></textarea>
                                             </div>
                                             <div class="col-xl-6 col-md-6 col-12 mb-1">
                                                 <label for="customFile">Team Photo</label>
@@ -426,6 +426,7 @@
                         oTable.fnDraw(false);
                         $('#btndel').val('DELETE!');
                         $('#btndel').attr('disabled', false);
+                        $('#deskripsi_add').summernote('code','');
                         toastr['error']('👋' + response.message, 'Warning!', {
                             closeButton: true,
                             tapToDismiss: false,
