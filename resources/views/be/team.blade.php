@@ -360,9 +360,10 @@
             modal.find('.modal-content #id').val(id);
             modal.find('.modal-content #name').val(name);
             modal.find('.modal-content #position').val(position);
-            modal.find('.modal-content #deskripsi').val(deskripsi);
+            // modal.find('.modal-content #deskripsi').val(deskripsi);
             modal.find('.modal-content #email').val(email);
             modal.find('.modal-content #pass').val(pass);
+            $('#deskripsi').summernote('code',deskripsi);
             document.getElementById('imgpreview').src = src;
             console.log(src);
         })
