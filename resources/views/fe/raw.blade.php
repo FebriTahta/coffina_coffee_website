@@ -3361,7 +3361,7 @@
                                                     </h4>
                                                     <span class="jenis_name"
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>"{{ $item->jenis->name }}"</span>
-                                                    <div style="text-align: right">
+                                                    <div style="text-align: left">
                                                         <p class="jenis_desk"
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>
                                                         {!! $item->deskripsi !!}
