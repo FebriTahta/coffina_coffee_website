@@ -199,7 +199,7 @@
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 mb-1">
                                 <label for="">Deskripsi</label>
-                                <textarea name="deskripsi" class="form-control" id="deskripsi" cols="30" rows="3"></textarea>
+                                <textarea name="deskripsi" class="form-control summernote" id="deskripsi" cols="30" rows="3"></textarea>
                             </div>
                             <div class="col-xl-6 col-md-6 col-12 mb-1">
                                 <label for="customFile">Team Photo</label>
@@ -318,6 +318,8 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('app-assets/css/plugins/extensions/ext-component-toastr.css') }}">
     <script src="{{ asset('app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <script>
         function showPreview(event) {
             if (event.target.files.length > 0) {
