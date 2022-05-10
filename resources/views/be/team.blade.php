@@ -197,7 +197,7 @@
                                 <label for="">Position</label>
                                 <input type="text" class="form-control" id="position" name="position" required>
                             </div>
-                            <div class="col-xl-6 col-md-6 col-12 mb-1">
+                            <div class="col-xl-12 col-md-12 col-12 mb-1">
                                 <label for="">Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control summernote" id="deskripsi" cols="30" rows="3"></textarea>
                             </div>
