@@ -39,7 +39,7 @@ class ProductController extends Controller
                         return '<img src='.$url.' border="0" width="100px" align="center" />'; 
                     })
                     ->addColumn('option', function($data){
-                        $actionBtn = '<a href="#" type="button" data-id="'.$data->id.'" data-deskripsi="'.$data->deskripsi.'" data-src="'.asset('img/product/'.$data->img).'" data-name="'.$data->name.'" data-toggle="modal" data-target="#modaledit" class="text-primary" >UPDATE </a>';
+                        $actionBtn = '<a href="#" type="button" data-id="'.$data->id.'" data-deskripsi="'.strip_tags($data->deskripsi).'" data-src="'.asset('img/product/'.$data->img).'" data-name="'.$data->name.'" data-toggle="modal" data-target="#modaledit" class="text-primary" >UPDATE </a>';
                         $actionBtn .= ' <a href="#" type="button" data-id="'.$data->id.'" data-image="'.$data->img.'" data-toggle="modal" data-target="#large" class="text-danger"> DELETE</a>';
                         return $actionBtn;
                     })
