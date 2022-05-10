@@ -47,7 +47,11 @@ class ProductController extends Controller
                         $jenis = $data->jenis->name;
                         return $jenis;
                     })
-            ->rawColumns(['option','jenis','image'])
+                    ->addColumn('deskripsi', function($data){
+                        $des = strip_tags($data->deskripsi);
+                        return $des;
+                    })
+            ->rawColumns(['option','jenis','image','deskripsi'])
             ->make(true);
         }
         $jenis = Jenis::all();
