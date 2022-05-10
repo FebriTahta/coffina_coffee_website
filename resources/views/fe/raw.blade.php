@@ -3361,12 +3361,14 @@
                                                     </h4>
                                                     <span class="jenis_name"
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>"{{ $item->jenis->name }}"</span>
+                                                    <hr>
                                                     <div style="text-align: left">
                                                         <p class="jenis_desk"
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>
                                                         {!! $item->deskripsi !!}
                                                         </p>
                                                     </div>
+                                                    
                                                     <div class="button">
                                                         @if ($profile !== null)
                                                             <a href="mailto:{{ $profile->email }}"
