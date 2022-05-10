@@ -329,6 +329,13 @@
                 preview.style.display = "block";
             }
         }
+        $(document).ready(function() {
+                $('.summernote').summernote({
+                    placeholder: 'Deskripsi...',
+                    tabsize: 2,
+                    height: 200
+                });
+            });
 
         function showPreview2(event) {
             if (event.target.files.length > 0) {
