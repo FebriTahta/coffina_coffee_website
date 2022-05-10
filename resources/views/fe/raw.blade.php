@@ -3363,7 +3363,7 @@
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>"{{ $item->jenis->name }}"</span>
                                                     <p class="jenis_desk"
                                                         @if ($profile !== null) style="color: {{ $profile->warna_bg }}" @endif>
-                                                        {{ $item->deskripsi }}
+                                                        {!! $item->deskripsi !!}
                                                     </p>
                                                     <div class="button">
                                                         @if ($profile !== null)
